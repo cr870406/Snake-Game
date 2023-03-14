@@ -6,14 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>貪食蛇遊戲</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <canvas id="MyCanvas" width="320" height="320" style="background-color: black;"></canvas>
-    <P id="score"></P>
-    <p id="score2"></p>
-    <button type="button" id="start" onclick="location.reload()">開始新遊戲</button>
+    <P id="score" class="score"></P>
+    <p id="score2" class="score2"></p>
+    <button type="button" id="start" class="start" onclick="location.reload()">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        開始新遊戲
+    </button>
+    <canvas id="MyCanvas" class="box" width="320" height="320" style="background-color: black; "></canvas>
     <script src="./app.js"></script>
 </body>
 

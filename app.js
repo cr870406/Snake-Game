@@ -31,7 +31,11 @@ class Fruit {
     this.y = Math.floor(Math.random() * row) * unit;
   }
   drawfruit() {
-    ctx.fillStyle = "yellow";
+    ctx.fillStyle = "#EDF1D6";
+    ctx.shadowColor = "#EDF1D6";
+    ctx.shadowBlur = 10;
+    ctx.shadowOffsetX = 0;
+    ctx.shadowOffsetY = 0;
     ctx.fillRect(this.x, this.y, unit, unit);
   }
   pick() {
@@ -108,14 +112,22 @@ function draw() {
 
   ctx.fillStyle = "black";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
+
   myfruit.drawfruit();
   for (i = 0; i < snake.length; i++) {
     if (i == 0) {
-      ctx.fillStyle = "lightgreen";
+      ctx.fillStyle = "#EDF1D6";
+      ctx.shadowColor = "#EDF1D6";
+      ctx.shadowBlur = 10;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
     } else {
-      ctx.fillStyle = "lightblue";
+      ctx.fillStyle = "#9DC08B";
+      ctx.shadowBlur = 0;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
     }
-    ctx.strokeStyle = "white";
+    ctx.strokeStyle = "#609966";
     ctx.fillRect(snake[i].x, snake[i].y, unit, unit);
     ctx.strokeRect(snake[i].x, snake[i].y, unit, unit);
   }
